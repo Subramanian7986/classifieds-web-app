@@ -1,0 +1,96 @@
+.product-item {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-item img {
+  border-radius: 4px;
+}
+
+.product-item h3 {
+  font-size: 1.25rem;
+}
+
+.product-item p {
+  margin: 10px 0;
+}
+.product-item button {
+  background-color: #28a745;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-item button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+.order-form {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-form h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.order-form .form-group {
+  margin-bottom: 15px;
+}
+
+.order-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.order-form input, .order-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.order-form .form-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-form .form-actions button {
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-form .form-actions button:hover {
+  background-color: #0056b3;
+}
+
+.order-form .form-actions button.cancel {
+  background-color: #dc3545;
+}
+
+.order-form .form-actions button.cancel:hover {
+  background-color: #c82333;
+}

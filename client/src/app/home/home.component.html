@@ -1,0 +1,55 @@
+<!-- Header Section -->
+<header>
+  <h1>Welcome, {{ username }}</h1>
+  <nav>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/sell" routerLinkActive="active">Sell Product</a>
+    <a routerLink="/details" routerLinkActive="active">Details</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <button (click)="logout()">Logout</button>
+  </nav>
+</header>
+
+<!-- Product List Section -->
+<div *ngIf="products.length > 0; else noProducts">
+<div *ngFor="let product of products" class="product-item">
+  <h3>{{ product.name }}</h3>
+  <img [src]="product.image ? 'http://localhost:3000/uploads/' + product.image : 'assets/default-image.png'" alt="{{ product.name }}" width="100" />
+  <p>Price: {{ product.price | currency: 'USD' }}</p>
+  <button (click)="openOrderForm(product)">Buy</button>
+</div> </div>
+<ng-template #noProducts>
+  <p>No products available.</p>
+</ng-template>
+
+<!-- Order Form Section -->
+<div *ngIf="showOrderForm" class="order-form">
+  <h2>Order {{ selectedItem?.name }}</h2>
+
+  <div class="form-group">
+    <label for="address">Address:</label>
+    <textarea id="address" [(ngModel)]="order.address" name="address" rows="3" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="order.email" name="email" type="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phoneNumber">Phone Number:</label>
+    <input id="phoneNumber" [(ngModel)]="order.phoneNumber" name="phoneNumber" type="tel" required>
+  </div>
+
+  <div class="form-group">
+    <label for="expectedPrice">Expected Price:</label>
+    <input id="expectedPrice" [(ngModel)]="order.expectedPrice" name="expectedPrice" type="number" min="0" required>
+  </div>
+
+  <p>Total Price: {{ selectedItem?.price | currency: 'USD' }}</p>
+
+  <div class="form-actions">
+    <button (click)="placeOrder()">Place Order</button>
+    <button (click)="closeOrderForm()">Cancel</button>
+  </div>
+</div>

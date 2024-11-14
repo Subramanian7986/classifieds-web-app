@@ -1,0 +1,13 @@
+<h2>Sell Product</h2>
+<form (ngSubmit)="onSubmit()" #sellForm="ngForm">
+  <input type="text" name="productName" [(ngModel)]="productName" placeholder="Product Name" required>
+  <input type="text" name="productDescription" [(ngModel)]="productDescription" placeholder="Product Description" required>
+  <input type="number" name="price" [(ngModel)]="price" placeholder="Price" required>
+
+  <!-- File input for image upload -->
+  <input type="file" name="productImage" (change)="onFileChange($event)" accept="image/*" required>
+  
+  <button type="submit">Submit</button>
+</form>
+
+<button (click)="goHome()">Return to Home</button>

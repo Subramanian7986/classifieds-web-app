@@ -1,0 +1,48 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.container h1 {
+  font-size: 2rem;
+  color: #343a40;
+  text-align: center; /* Centers the heading */
+  margin-bottom: 20px;
+}
+
+.container p {
+  color: #dc3545;
+  text-align: center; /* Centers the error message */
+}
+
+.container input {
+  width: calc(100% - 24px); /* Accounts for padding and border */
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.container button {
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block; /* Ensures button is centered */
+  width: 100%; /* Full width button */
+}
+
+.container button:hover {
+  background-color: #0056b3;
+}

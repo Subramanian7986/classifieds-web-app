@@ -1,0 +1,48 @@
+h2 {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="number"], input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.return {
+  background-color: #6c757d;
+}
+
+button.return:hover {
+  background-color: #5a6268;
+}

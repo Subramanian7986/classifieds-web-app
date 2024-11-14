@@ -1,0 +1,60 @@
+<div class="details-container">
+  <h1>Welcome, {{ username }}</h1>
+
+  <!-- Selling Products -->
+  <h2>Selling Products</h2>
+  <ul *ngIf="sellingProducts.length > 0; else noSellingProducts">
+    <li *ngFor="let product of sellingProducts">
+      <div class="product-card">
+        <img [src]="'http://localhost:3000/uploads/' + product?.image" alt="{{ product?.name }}" width="100" height="100" />
+        <div class="product-info">
+          <h3>{{ product?.name }}</h3>
+          <p>Price: {{ product?.price | currency }}</p>
+          <p>Seller: {{ product?.sellerId?.username || username }}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ng-template #noSellingProducts>
+    <p>No selling products available</p>
+  </ng-template>
+
+  <!-- Bought Products -->
+  <h2>Bought Products</h2>
+  <ul *ngIf="boughtProducts.length > 0; else noBoughtProducts">
+    <li *ngFor="let product of boughtProducts">
+      <div class="product-card">
+        <img [src]="'http://localhost:3000/uploads/' + product?.image" alt="{{ product?.name }}" width="100" height="100" />
+        <div class="product-info">
+          <h3>{{ product?.name }}</h3>
+          <p>Price: {{ product?.price | currency }}</p>
+          <p>Seller: {{ product?.sellerName || 'Unknown' }}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ng-template #noBoughtProducts>
+    <p>No bought products available</p>
+  </ng-template>
+
+  <!-- Sold Products -->
+  <h2>Sold Products</h2>
+  <ul *ngIf="soldProducts.length > 0; else noSoldProducts">
+    <li *ngFor="let product of soldProducts">
+      <div class="product-card">
+        <img [src]="'http://localhost:3000/uploads/' + product?.image" alt="{{ product?.name }}" width="100" height="100" />
+        <div class="product-info">
+          <h3>{{ product?.name }}</h3>
+          <p>Price: {{ product?.price | currency }}</p>
+          <p>Buyer: {{ product?.buyerName || 'Unknown' }}</p>
+          <p>Phone Number: {{ product?.buyerPhoneNumber || 'N/A' }}</p>
+          <p>Email: {{ product?.buyerEmail || 'N/A' }}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ng-template #noSoldProducts>
+    <p>No sold products available</p>
+  </ng-template>
+  <button class="return-home" (click)="goHome()">Return to Home</button>
+</div>
