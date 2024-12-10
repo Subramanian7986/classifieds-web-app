@@ -32,7 +32,7 @@ Welcome to the **Classifieds Web Application** where users can easily buy and se
 ### 1️⃣ **Clone the Repository**
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Subramanian7986/classifieds-web-app.git
 cd classifieds-web-app
 ```
 
